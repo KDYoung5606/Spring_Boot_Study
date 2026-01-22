@@ -45,4 +45,16 @@ public class Store extends BaseEntity {
     @OneToMany(mappedBy = "store", cascade = CascadeType.ALL)
     // 여기서 중요한 부분은 매핑을 하는 부분인데, Review 엔티티에 store 필드가 이 연관관계의 주인(외래 키를 가진 쪽)이라는 것을 나타낸다.
     private List<Review> reviewList = new ArrayList<>();
+
+    @Override
+    public String toString() {
+        return "Store{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", score=" + score +
+                ", region=" + (region != null ? region.getName() : "N/A") + // region의 이름 출력
+                '}';
+    }
 }
+
