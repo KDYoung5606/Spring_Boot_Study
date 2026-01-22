@@ -9,9 +9,10 @@ import umc.study.domain.Store;
 
 import java.util.List;
 
+
 @Repository
 @RequiredArgsConstructor
-public class StoreRepositoyImpl implements StoreRepositoryCustom{
+public class StoreRepositoryImpl implements StoreRepositoryCustom{
     private final JPAQueryFactory jpaQueryFactory;
     private final QStore store = QStore.store;
 
